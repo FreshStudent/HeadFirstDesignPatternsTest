@@ -20,6 +20,5 @@ public abstract class Duck {
 	//每个鸭子的表现形式都是不一样的，有些是黑色的，有些是白色的。
 	public abstract void display();	
 ```
-
 2、刚开始，需要做一个鸭子的模型，因为不同的鸭子都是会叫（quack）和会游泳（swim）的，只是每个鸭子长得（display）不一样。
 
