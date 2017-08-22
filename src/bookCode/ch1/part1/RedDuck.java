@@ -8,12 +8,13 @@ public class RedDuck extends Duck{
 		redDuck.swin();
 		redDuck.quack();
 		redDuck.display();
+		redDuck.fly();
 		
 	}
 
 	@Override
 	public void display() {
-		System.out.println("这是红色的鸭子啊，傻逼！");		
+		System.out.println("这是红色的鸭子啊！");		
 	}
 	
 }
