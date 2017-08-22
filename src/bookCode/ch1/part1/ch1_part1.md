@@ -8,7 +8,7 @@
 1、刚开始，需要做一个鸭子的模型，因为不同的鸭子都是会叫（quack）和会游泳（swim）的，只是每个鸭子长得（display）不一样。
 ###### 因此，父类duck中实现quack、swim（不需要变化的），子类实现display（不一样的）
 
-<code>
+`
 public abstract class Duck {
 	//每只鸭子都会叫和游泳，所以在父类中定义叫和游泳的方法
 	public void quack() {
@@ -19,6 +19,6 @@ public abstract class Duck {
 	};
 	//每个鸭子的表现形式都是不一样的，有些是黑色的，有些是白色的。
 	public abstract void display();	
-<code>
+`
 2、刚开始，需要做一个鸭子的模型，因为不同的鸭子都是会叫（quack）和会游泳（swim）的，只是每个鸭子长得（display）不一样。
 
