@@ -8,6 +8,7 @@
 一、刚开始，需要做一个鸭子的模型，有橡皮鸭子、红鸭子（普通鸭子）等，因为不同的鸭子都是会叫（quack）和会游泳（swim）的，只是每个鸭子长得（display）不一样，所以考虑利用**【继承】**来实现。
 ###### 因此，父类duck中实现quack、swim（不需要变化的），子类实现display（不一样的）
 
+
 ``` java
 父类 ：Duck.java
 
@@ -58,6 +59,7 @@ public class NormalDuck extends Duck{
 	
 }
 ```
+
 ``` java
 子类：RubberDuck.java
 /**
