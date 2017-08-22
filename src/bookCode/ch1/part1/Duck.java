@@ -1,5 +1,9 @@
 package bookCode.ch1.part1;
 
+/**
+ * 父类：Duck.java
+ *
+ */
 public abstract class Duck {
 	
 	//每只鸭子都会叫和游泳，所以在父类中定义叫和游泳的方法

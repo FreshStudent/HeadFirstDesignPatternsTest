@@ -2,7 +2,8 @@ package bookCode.ch1.part1;
 
 
 /**
- * 普通鸭子
+ * 子类
+ * 普通鸭子 NormalDuck.java
  */
 public class NormalDuck extends Duck{
 
@@ -18,6 +19,9 @@ public class NormalDuck extends Duck{
 		normalDuck.swin();
 		normalDuck.quack();
 		normalDuck.display();
+		
+		//实现父类的“飞”方法
+		normalDuck.fly();
 		
 	}
 	

@@ -1,6 +1,7 @@
 package bookCode.ch1.part1;
 
 /**
+ * 子类
  * RubberDuck.java 橡皮鸭子
  *
  */
@@ -13,6 +14,8 @@ public class RubberDuck extends Duck{
 		rubberDuck.swin();
 		rubberDuck.display();
 		
+		//实现父类的“飞”方法
+		rubberDuck.fly();
 		
 	}
 	
