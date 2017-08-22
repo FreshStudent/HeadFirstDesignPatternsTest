@@ -1,16 +1,16 @@
 startDate:2017-08-22 
-####Chapter 01 Intro to Design Patterns 第01章 设计模式入门
+#### Chapter 01 Intro to Design Patterns 第01章 设计模式入门
  
-#####1. Design Principle Identify the aspects of your application that vary and separate them from what stays the same.  (P9)
+##### 1. Design Principle Identify the aspects of your application that vary and separate them from what stays the same.  (P9)
 设计原则：找出应用中可能需要变化之处，把它们独立出来，不要和那些不需要变化的代码混在一起。
 
-#####2. Design Principle Program to an interface, not an implementation. (P11)
+##### 2. Design Principle Program to an interface, not an implementation. (P11)
 设计原则：针对接口编程，而不是针对实现编程。
 
-#####3. Design Principle Favor composition over inheritance.   (P23)
+##### 3. Design Principle Favor composition over inheritance.   (P23)
 设计原则：多用组合，少用继承。
 
-#####4. The Strategy Pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable. Strategy lets the algorithm vary independently from clients that use it.  (P24）
+##### 4. The Strategy Pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable. Strategy lets the algorithm vary independently from clients that use it.  (P24）
 策略模式：定义了算法族，分别封装起来，让它们之间可以互相替换，此模式让算法的变化独立于使用算法的客户。
  
 ####Chapter 02 the observer pattern 第02章 观察者模式
