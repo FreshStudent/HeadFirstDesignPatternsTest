@@ -1,4 +1,4 @@
-package bookCode.ch1;
+package bookCode.ch1.part1;
 
 public class RedDuck extends Duck{
 
@@ -8,9 +8,6 @@ public class RedDuck extends Duck{
 		redDuck.swin();
 		redDuck.quack();
 		redDuck.display();
-		
-		//需要会飞
-		redDuck.fly();
 		
 	}
 

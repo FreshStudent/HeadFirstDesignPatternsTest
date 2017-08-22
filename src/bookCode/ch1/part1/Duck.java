@@ -1,4 +1,4 @@
-package bookCode.ch1;
+package bookCode.ch1.part1;
 
 public abstract class Duck {
 	
@@ -10,11 +10,7 @@ public abstract class Duck {
 	public void swin() {
 		System.out.println("鸭子游啊游~~");
 	};
-	
-	public void fly() {
-		System.out.println("鸭子都会飞啊  飞飞飞~~");
-	};
-	
-	public abstract void display();//每个鸭子的表现形式都是不一样的，有些事黑色的，有些事白色的。
+
+	public abstract void display();//每个鸭子的表现形式都是不一样的，有些是黑色的，有些是白色的。
 
 }
