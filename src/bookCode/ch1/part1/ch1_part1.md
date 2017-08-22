@@ -1,14 +1,14 @@
-#### Chapter 01 Intro to Design Patterns 第01章 设计模式入门
+## Chapter 01 Intro to Design Patterns 第01章 设计模式入门
  
-##### 1. Design Principle Identify the aspects of your application that vary and separate them from what stays the same.  (P9)
+### 1. Design Principle Identify the aspects of your application that vary and separate them from what stays the same.  (P9)
 设计原则：找出应用中可能需要变化之处，把它们独立出来，不要和那些不需要变化的代码混在一起。
 
 ---
-#### 需求迭代：
-一、Boss们想做一些鸭子：
+## 需求迭代：
+### 一、Boss们想做一些鸭子：
 > Boss：需要做一个鸭子的模型，有橡皮鸭子、红鸭子（普通鸭子）等。
 > 
-> Lee：因为不同的鸭子都是会叫（quack）和会游泳（swim）的，只是每个鸭子样子长得（display）不一样，所以考虑利用**【继承】**来实现
+> Lee：因为不同的鸭子都是会叫（quack）和会游泳（swim）的，只是每个鸭子样子长得（display）不一样，所以考虑利用 **【继承】** 来实现
 >
 >因此，父类duck中实现quack、swim（不需要变化的），子类实现display（不一样的）；
 
@@ -95,7 +95,7 @@ public class RubberDuck extends Duck{
 - 子类具有相同的属性，因此可以将共性作为父类抽取出来，利用【继承】即可减少重复代码；
 - 针对不同的（例如外貌），需要在父类中定义一个抽象方法display，在子类中重写父类的display方法，并各自实现display。
 
-二、Boss们想要做出来的鸭子会飞的：
+### 二、Boss们想要做出来的鸭子会飞的：
 > Boss：目前做出来的鸭子，需要可以飞的。
 > 
 > Lee：会飞是吧？行啊，直接在继承类中增加“飞”的方法就行了！
@@ -277,7 +277,7 @@ public static void main(String args[]) {
 > 接口是抽象方法的集合。如果一个类实现了某个接口，那么它就继承了这个接口的抽象方法。这就像契约模> 式，如果<font color=red face="微软雅黑">**实现**</font>了这个接口，那么就<font color=red face="微软雅黑">**必须**</font>确保<font color=red face="微软雅黑">**使用这些方法**</font>。
 
 ---
-#### **什么时候使用抽象类和接口**
+# **什么时候使用抽象类和接口？？？？**
 
 - 如果你拥有一些方法并且想让它们中的一些有默认实现，那么使用抽象类吧。
 - 如果你想实现多重继承，那么你必须使用接口。由于Java不支持多继承，子类不能够继承多个类，但可以实现多个接口。因此你就可以使用接口来解决它。
