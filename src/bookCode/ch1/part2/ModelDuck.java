@@ -19,4 +19,8 @@ public class ModelDuck extends AbstractDuck{
 		System.out.println("This is 模型鸭！！");
 	}
 	
+	public void modelDuckSmile() {
+		System.out.println("This is 模型鸭在笑！！");		
+	}
+	
 }

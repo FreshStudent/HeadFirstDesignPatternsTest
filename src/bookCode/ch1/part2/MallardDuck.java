@@ -13,6 +13,7 @@ public class MallardDuck extends AbstractDuck{
 		
 		//鸭子中“飞”的行为，在父类中被委托到iFlyBehavior对象，于是，绿头鸭子“飞”实现类是FlyWithWindsIFlyBehaviorImpl
 		iFlyBehavior = new FlyWithWindsIFlyBehaviorImpl(); 
+		
 	}
 	
 	@Override
