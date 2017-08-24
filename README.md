@@ -4,9 +4,11 @@ startDate:2017-08-22
  
 ##### 1. Design Principle Identify the aspects of your application that vary and separate them from what stays the same.  (P9)
 设计原则：找出应用中可能需要变化之处，把它们独立出来，不要和那些不需要变化的代码混在一起。
+[参考链接](https://github.com/FreshStudent/HeadFirstDesignPatternsTest/blob/master/src/bookCode/ch1/part1/ch1_part1.md)
 
 ##### 2. Design Principle Program to an interface, not an implementation. (P11)
 设计原则：针对接口编程，而不是针对实现编程。
+[参考链接](https://github.com/FreshStudent/HeadFirstDesignPatternsTest/blob/master/src/bookCode/ch1/part2/ch1_part2.md)
 
 ##### 3. Design Principle Favor composition over inheritance.   (P23)
 设计原则：多用组合，少用继承。
