@@ -1,7 +1,7 @@
 package bookCode.ch1.part2;
 
 /**
- * 父类：Duck.java
+ * 父类：AbstractDuck.java
  *
  */
 public abstract class AbstractDuck {

@@ -17,7 +17,7 @@ public class AllDuckShowMain {
 		modelDuck.performFly();
 		modelDuck.performQuack();
 		
-		//AbstractDuck modelDuck = new ModelDuck();这是对上转型（实现类的“上”是接口，对上转型：限制只能使用父类定义好的方法，一般子类定义的方法都是比父类多的，）
+		//AbstractDuck modelDuck = new ModelDuck();这是对上转型（实现类的“上”指的是是接口，对上转型：限制只能使用父类定义好的方法，一般子类定义的方法都是比父类多的，）
 		//modelDuck.modelDuckSmile();   //报错！！！！   modelDuckSmile()这个是子类的方法，这样调用是会报错的；
 		
 		//ModelDuck modelDuck = new ModelDuck();
@@ -33,6 +33,15 @@ public class AllDuckShowMain {
 		 * modelDuck.modelDuckSmile();   //报错！！   因为：modelDuckSmile()这个是子类的方法，父类是没有这个方法的，这样调用是会报错的；
 		 * 
 		 */
+		
+		
+		//诱饵鸭
+		System.out.println("---------------");
+		
+		AbstractDuck decoyDuck = new DecoyDuck();   //对上转型，DecoyDuck:诱饵鸭子  会叫不会飞
+		decoyDuck.display();
+		decoyDuck.performFly();
+		decoyDuck.performQuack();
 		
 	}
 }
