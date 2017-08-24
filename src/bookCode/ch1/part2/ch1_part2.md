@@ -299,5 +299,6 @@ I Fly by Rocket!
 << Silence! >>
 ```	
 
-		
+### 相关类UML图：
+![类UML图](https://github.com/FreshStudent/HeadFirstDesignPatternsTest/blob/master/src/bookCode/ch1/part2/ch1_part2UML.png)		
 

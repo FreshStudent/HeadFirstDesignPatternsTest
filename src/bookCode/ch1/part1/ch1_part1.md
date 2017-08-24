@@ -284,4 +284,5 @@ public static void main(String args[]) {
 - 如果基本功能在不断改变，那么就需要使用抽象类。
 - 如果不断改变基本功能并且使用接口，那么就需要改变所有实现了该接口的类。
 
+### 相关类UML图：
 ![类UML图](https://github.com/FreshStudent/HeadFirstDesignPatternsTest/blob/master/src/bookCode/ch1/part1/ch1_part1UML.png)
