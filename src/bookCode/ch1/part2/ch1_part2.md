@@ -45,7 +45,6 @@ public abstract class AbstractDuck {
 ``` java
 /**
  *  定义鸭子飞行的接口类
- *
  */
 public interface IFlyBehavior {
 	
@@ -63,28 +62,22 @@ public class FlyWithWindsIFlyBehaviorImpl implements IFlyBehavior{
 	//重写飞接口的fly方法
 	@Override
 	public void fly() {
-		
 		//实现接口中飞的方法
 		System.out.println("I am Flying!");
-		
 	}
-
 }
 ```
 --
 ``` java
 //不会飞的实现类，给不会飞的鸭子使用。
 public class FlyNoWayIFlyBehaviorImpl implements IFlyBehavior{
-
+	
 	//重写飞接口的fly方法
 	@Override
 	public void fly() {
-		
 		//实现接口中飞的方法
 		System.out.println("I can‘t Fly!");
-		
 	}
-
 }
 ```
 --
@@ -148,6 +141,7 @@ public class AllDuckShowMain {
 	
 	public static void main(String args[]) {
 		
+		//绿头鸭
 		//eg:  Inf inf = new InfImpl();
 		AbstractDuck mallardDuck = new MallardDuck();   //对上转型，MallardDuck:绿头鸭
 		mallardDuck.display();
@@ -156,30 +150,38 @@ public class AllDuckShowMain {
 		
 		System.out.println("---------------");
 		
+		//模型鸭
 		AbstractDuck modelDuck = new ModelDuck();   //对上转型，ModelDuck:模型鸭子
 		modelDuck.display();
 		modelDuck.performFly();
 		modelDuck.performQuack();
 		
-		//AbstractDuck modelDuck = new ModelDuck();这是对上转型（实现类的“上”指的是是接口，对上转型：限制只能使用父类定义好的方法，一般子类定义的方法都是比父类多的，）
-		//modelDuck.modelDuckSmile();   //报错！！！！   modelDuckSmile()这个是子类的方法，这样调用是会报错的；
-		
-		//ModelDuck modelDuck = new ModelDuck();
-		//modelDuck.modelDuckSmile();   //不报错
-		
 		System.out.println("---------------");
 		
-		//AbstractDuck modelDuck = new ModelDuck();为什么不直接写成 ModelDuck  duck = new ModelDuck(); 
-		/**
-		 * 那是因为 Inf inf = new InfImpl();  表示 inf 是要实现 Inf 接口的意思，
-		 * 等价于   inf -> new InfImpl(); 
-		 * AbstractDuck modelDuck = new ModelDuck();这是对上转型（实现类的“上”是接口，对上转型：限制只能使用父类定义好的方法，一般子类定义的方法都是比父类多的，）
-		 * modelDuck.modelDuckSmile();   //报错！！   因为：modelDuckSmile()这个是子类的方法，父类是没有这个方法的，这样调用是会报错的；
-		 * 
-		 */
+		//诱饵鸭
+        AbstractDuck decoyDuck = new DecoyDuck();   //对上转型，DecoyDuck:诱饵鸭子  会叫不会飞
+		decoyDuck.display();
+		decoyDuck.performFly();
+		decoyDuck.performQuack();		
 		
+		System.out.println("---------------");
+
 	}
 }
+
+运行结果：
+This is 绿头鸭！！
+I am Flying!
+Quack！
+---------------
+This is 模型鸭！！
+I can‘t Fly!
+<< Silence! >>
+---------------
+This is 诱饵鸭！！
+I can‘t Fly!
+Quack！
+---------------
 
 ```
 ## 疑问：
@@ -203,7 +205,12 @@ ModelDuck  duck = new ModelDuck();
 ``` 
 >> 因为：modelDuckSmile()这个是子类的方法，父类是没有这个方法的，(向上转型)这样调用是会报错的；
 >> 
-## 简单来说：就是利用向上转型，限制接口引用只能调用【父类】中的方法。
+> 简单来说：
+> 
+>> AbstractDuck modelDuck = new ModelDuck();
+>> 
+>> 就是利用向上转型，限制modelDuck【接口实现类】只能调用AbstractDuck【父类】中的方法。
+
 
 ---
 ### 思考：如果现在要实现诱饵鸭（DecoyDuck，不会飞，会叫），该怎么实现？
@@ -218,7 +225,7 @@ public class DecoyDuck extends AbstractDuck{
 	//构造函数
 	public DecoyDuck(){
 		
-		 //鸭子中“叫”的行为，在父类中被委托到iQuackBehavior对象，于是，模型鸭子“叫”实现类是QuackIQuackBehaviorImpl
+		//鸭子中“叫”的行为，在父类中被委托到iQuackBehavior对象，于是，模型鸭子“叫”实现类是QuackIQuackBehaviorImpl
 		iQuackBehavior = new QuackIQuackBehaviorImpl();  //诱饵鸭子会叫
 		
 		//鸭子中“飞”的行为，在父类中被委托到iFlyBehavior对象，于是，模型鸭子“飞”实现类是FlyNoWayIFlyBehaviorImpl
@@ -233,17 +240,17 @@ public class DecoyDuck extends AbstractDuck{
 ``` 
 ---
 ### 思考：
-> 以上每只鸭子的类中都先定义好了具体的行为，例如飞的形式、叫的形式，那么问题来了，如果需要实现_飞一下又不飞呢_？
+> 以上每只鸭子的类中都在构造方法中先定义好了具体的行为，例如飞的形式、叫的形式，那么问题来了，如果需要实现_飞一下又不飞呢_？
 > 
-> 原来的实现方式是，每只鸭子的【构造方法】中都先规定好了这只鸭子的行为，那么实现这只鸭子的时候，就根据其【构造方法】设定好的行为来表现这只鸭子。
+> 原来的实现方式是，每只鸭子的【构造方法】中都先规定好了这只鸭子的行为，那么这只鸭子的行为早就被限定好了，只有一套行为实现模式。
 > 
 > 例如以下模型鸭的代码:
 > 
 
 ```java
-//构造函数
+	//构造函数
 	public ModelDuck(){
-	   //鸭子中“叫”的行为，在父类中被委托到iQuackBehavior对象，于是，模型鸭子“叫”实现类是MuteQuackIQuackBehaviorImpl
+	    //鸭子中“叫”的行为，在父类中被委托到iQuackBehavior对象，于是，模型鸭子“叫”实现类是MuteQuackIQuackBehaviorImpl
 		iQuackBehavior = new MuteQuackIQuackBehaviorImpl();  //模型鸭子不会叫
 		//鸭子中“飞”的行为，在父类中被委托到iFlyBehavior对象，于是，模型鸭子“飞”实现类是FlyNoWayIFlyBehaviorImpl
 		iFlyBehavior = new FlyNoWayIFlyBehaviorImpl(); //模型鸭子是不会飞的
@@ -276,12 +283,13 @@ public class DecoyDuck extends AbstractDuck{
 	}
 ```
 相关的实现类：
+
 ```java
 		AbstractDuck rocketDuck = new RocketDuck();   //对上转型，DecoyDuck:诱饵鸭子  会叫不会飞
 		rocketDuck.display();
-		rocketDuck.performFly();
-		rocketDuck.setIFlyBehavior(new FlyRocketIFlyBehaviorImpl());
-		rocketDuck.performFly();
+		rocketDuck.performFly();//原来的飞行模式
+		rocketDuck.setIFlyBehavior(new FlyRocketIFlyBehaviorImpl());//动态设置新的飞行模式
+		rocketDuck.performFly();//新的飞行模式
 		rocketDuck.performQuack();
 		
 运行结果：

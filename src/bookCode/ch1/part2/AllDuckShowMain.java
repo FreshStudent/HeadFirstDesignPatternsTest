@@ -48,9 +48,9 @@ public class AllDuckShowMain {
 		
 		AbstractDuck rocketDuck = new RocketDuck();   //对上转型，DecoyDuck:诱饵鸭子  会叫不会飞
 		rocketDuck.display();
-		rocketDuck.performFly();
-		rocketDuck.setIFlyBehavior(new FlyRocketIFlyBehaviorImpl());
-		rocketDuck.performFly();
+		rocketDuck.performFly();//原来的飞行模式
+		rocketDuck.setIFlyBehavior(new FlyRocketIFlyBehaviorImpl());//动态设置新的飞行模式
+		rocketDuck.performFly();//新的飞行模式
 		rocketDuck.performQuack();
 		
 	}
