@@ -231,7 +231,65 @@ public class DecoyDuck extends AbstractDuck{
 	}
 }  
 ``` 
+---
+### 思考：
+> 以上每只鸭子的类中都先定义好了具体的行为，例如飞的形式、叫的形式，那么问题来了，如果需要实现_飞一下又不飞呢_？
+> 
+> 原来的实现方式是，每只鸭子的【构造方法】中都先规定好了这只鸭子的行为，那么实现这只鸭子的时候，就根据其【构造方法】设定好的行为来表现这只鸭子。
+> 
+> 例如以下模型鸭的代码:
+> 
 
+```java
+//构造函数
+	public ModelDuck(){
+	   //鸭子中“叫”的行为，在父类中被委托到iQuackBehavior对象，于是，模型鸭子“叫”实现类是MuteQuackIQuackBehaviorImpl
+		iQuackBehavior = new MuteQuackIQuackBehaviorImpl();  //模型鸭子不会叫
+		//鸭子中“飞”的行为，在父类中被委托到iFlyBehavior对象，于是，模型鸭子“飞”实现类是FlyNoWayIFlyBehaviorImpl
+		iFlyBehavior = new FlyNoWayIFlyBehaviorImpl(); //模型鸭子是不会飞的
+	} 
+``` 
+> 其实每只鸭子的构造函数都是为了改变“iQuackBehavior”、“iFlyBehavior”这两个行为引用指向的实现类。
+> 
+> 如果需要动态的改变鸭子的行为呢？怎么做？
+> 
+> 设想：如果可以动态的改变“iQuackBehavior”、“iFlyBehavior”这两个行为引用指向的实现类，不就可以实现动态绑定行为了吗？
+> 
+> 步骤：
+> > 1.在父类中定义setXXXBehavior方法，提供子类进行XXXBehavior相关行为的设置。
+> > >这样就可以动态的改变行为接口（“iQuackBehavior”、“iFlyBehavior”）指向的实现类了.
+> > 2.子类的鸭子实现函数体中，需要动态指定对应的实现类
+
+#### 代码如下：
+```java
+	//火箭鸭
+	public class RocketDuck extends AbstractDuck{
+		//构造函数
+		public RocketDuck(){
+			iQuackBehavior = new MuteQuackIQuackBehaviorImpl();  //一开始是不会叫的
+			iFlyBehavior = new FlyNoWayIFlyBehaviorImpl(); //一开始是不会飞的
+		}
+		@Override
+		public void display() {
+			System.out.println("This is 火箭鸭！！");
+		}
+	}
+```
+相关的实现类：
+```java
+		AbstractDuck rocketDuck = new RocketDuck();   //对上转型，DecoyDuck:诱饵鸭子  会叫不会飞
+		rocketDuck.display();
+		rocketDuck.performFly();
+		rocketDuck.setIFlyBehavior(new FlyRocketIFlyBehaviorImpl());
+		rocketDuck.performFly();
+		rocketDuck.performQuack();
+		
+运行结果：
+This is 火箭鸭！！
+I can‘t Fly!
+I Fly by Rocket!
+<< Silence! >>
+```	
 
 		
 

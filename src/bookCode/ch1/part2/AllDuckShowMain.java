@@ -43,5 +43,15 @@ public class AllDuckShowMain {
 		decoyDuck.performFly();
 		decoyDuck.performQuack();
 		
+		//火箭鸭
+		System.out.println("---------------");
+		
+		AbstractDuck rocketDuck = new RocketDuck();   //对上转型，DecoyDuck:诱饵鸭子  会叫不会飞
+		rocketDuck.display();
+		rocketDuck.performFly();
+		rocketDuck.setIFlyBehavior(new FlyRocketIFlyBehaviorImpl());
+		rocketDuck.performFly();
+		rocketDuck.performQuack();
+		
 	}
 }
