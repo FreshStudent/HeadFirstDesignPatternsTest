@@ -6,7 +6,7 @@ public class DecoyDuck extends AbstractDuck{
 	//构造函数
 	public DecoyDuck(){
 		
-		 //鸭子中“叫”的行为，在父类中被委托到iQuackBehavior对象，于是，模型鸭子“叫”实现类是QuackIQuackBehaviorImpl
+		//鸭子中“叫”的行为，在父类中被委托到iQuackBehavior对象，于是，模型鸭子“叫”实现类是QuackIQuackBehaviorImpl
 		iQuackBehavior = new QuackIQuackBehaviorImpl();  //诱饵鸭子会叫
 		
 		//鸭子中“飞”的行为，在父类中被委托到iFlyBehavior对象，于是，模型鸭子“飞”实现类是FlyNoWayIFlyBehaviorImpl
