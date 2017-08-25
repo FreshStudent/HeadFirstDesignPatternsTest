@@ -185,8 +185,8 @@
                               <constraint>
                                 <height>-1</height>
                                 <width>-1</width>
-                                <x>771</x>
-                                <y>7</y>
+                                <x>773</x>
+                                <y>0</y>
                               </constraint>
                               <sourceConnections/>
                               <targetConnections>

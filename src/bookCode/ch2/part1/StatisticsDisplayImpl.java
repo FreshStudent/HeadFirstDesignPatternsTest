@@ -8,7 +8,7 @@ public class StatisticsDisplayImpl implements IObserver,IDisplayElement{
 	private int numReadings;
 	private WeatherDataImpl weatherData;
 
-	public StatisticsDisplayImpl(WeatherDataImpl weatherData) { //直接传对应的实现类作为构造函数的参数，便于调用该实现类的方法,但是这样写不是很灵活，建议写接口比较好一点（对上转型）
+	public StatisticsDisplayImpl(WeatherDataImpl weatherData) { //直接传对应的实现类作为构造函数的参数，便于调用该实现类的方法,但是这样写不是很灵活，建议写接口比较好一点（向上转型）
 		this.weatherData = weatherData;
 		weatherData.registerObservers(this);
 	}

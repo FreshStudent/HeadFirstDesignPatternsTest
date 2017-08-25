@@ -36,12 +36,11 @@ public class WeatherDataImpl implements ISubject{
 		notifyObservers();
 	}
 	
+	//设置改变的温度、湿度、气压值
 	public void setMeasurements(float temperature,float humidity,float pressure) {
 		this.temperature = temperature;
 		this.humidity = humidity;
 		this.pressure = pressure;
 		measurementsChanged();
 	}
-	
-	
 }
