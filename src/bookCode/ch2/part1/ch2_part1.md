@@ -14,4 +14,6 @@
 
 ### 今天要做一个天气预报的系统，不同的展示板都需要及时获取气象中心发布的天气信息。
 
+### 相关类UML图：
+![类UML图](https://github.com/FreshStudent/HeadFirstDesignPatternsTest/blob/master/src/bookCode/ch2/part1/ch2_part1UML.png)
 先摆一个类图，然后说明大概的代码思路，采用倒叙的方式来写，然后贴上关键代码！！
