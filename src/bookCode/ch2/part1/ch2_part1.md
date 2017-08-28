@@ -193,11 +193,43 @@ public class ForecastDisplayImpl implements IObserver,IDisplayElement{
 
 
 ```
+---
+
+``` java
+运行类：WeatherMainRun.java
+public class WeatherMainRun {
+
+	public static void main(String args[]) {
+		WeatherDataImpl weatherDataImpl = new WeatherDataImpl();
+		
+		CurrentConditionsDisplayImpl currentConditionsDisplayImp = new CurrentConditionsDisplayImpl(weatherDataImpl);
+		StatisticsDisplayImpl statisticsDisplayImp = new StatisticsDisplayImpl(weatherDataImpl);
+		ForecastDisplayImpl forecastDisplayImp = new ForecastDisplayImpl(weatherDataImpl);
+		
+		weatherDataImpl.setMeasurements(1, 78, 123);
+		weatherDataImpl.setMeasurements(9, 90, 666);
+		weatherDataImpl.setMeasurements(10, 100, 888);
+		
+	}
+}
+
+运行结果：
+CurrentConditionsDisplayImp : 1.0 度 and 78.0 湿度
+Avg/Max/Min temperature = 1.0/1.0/1.0
+Forecast: Improving weather on the way!
+CurrentConditionsDisplayImp : 9.0 度 and 90.0 湿度
+Avg/Max/Min temperature = 5.0/9.0/1.0
+Forecast: Improving weather on the way!
+CurrentConditionsDisplayImp : 10.0 度 and 100.0 湿度
+Avg/Max/Min temperature = 6.6666665/10.0/1.0
+Forecast: Improving weather on the way!
+
+```
 
 > 程序解读：
 > 
-> 气象站是一个发布天气信息的主体**（subject）** <br>
-> 每个报告版都是一名观察者**（observer）**，并且需要报告版展示**（display）**来自气象台的信息。<br> 
+> 气象站是一个发布天气信息的主体 **（subject）**  <br>
+> 每个报告版都是一名观察者 **（observer）** ，并且需要报告版展示 **（display）** 来自气象台的信息。<br> 
 > 所以可以定义3个接口，分别是subject、observer、display。<br>
 > subject: <br>
 >    registerObservers(注册观察者，等于是关注)<br>
