@@ -296,6 +296,8 @@ Forecast: Improving weather on the way!
 ```
 
 ### 以上是手动实现的观察者模式，其实Java也有内置的观察者模式~~ 留意下一章~~
+<br>
+[跳转链接·ch2_part2](https://github.com/FreshStudent/HeadFirstDesignPatternsTest/blob/master/src/bookCode/ch2/part2/ch2_part2.md)
 
 
 
