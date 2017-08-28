@@ -28,6 +28,8 @@ startDate:2017-08-22
 
 ##### 3. Loosely coupled designs allow use to build flexible OO systems that can handle change because they minimize the interdependency between objects. (P53)
 松耦合的设计之所以能让我们建立有弹性的OO系统，能够应对变化，是因为对象之间的互相依赖降到了最低。
+[参考链接·ch2_part1](https://github.com/FreshStudent/HeadFirstDesignPatternsTest/blob/master/src/bookCode/ch2/part2/ch2_part1.md)
+[参考链接·ch2_part2](https://github.com/FreshStudent/HeadFirstDesignPatternsTest/blob/master/src/bookCode/ch2/part2/ch2_part2.md)
  
 -------------------------------------------------- 
  
