@@ -1,5 +1,6 @@
 package bookCode.ch2.part1;
 
+//预测报告版
 public class ForecastDisplayImpl implements IObserver,IDisplayElement{
 	
 	private float currentPressure = 29.92f;  
