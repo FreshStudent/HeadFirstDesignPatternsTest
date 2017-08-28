@@ -5,9 +5,17 @@
 ### 1. The Observer Pattern defines a one-to-many dependency between objects so that one object change state,all of its dependents are notified and updated automatically.   (P51)
 观察者模式：定义了对象之间的一对多依赖，这样一来，当一个对象改变状态时，它的所有依赖者都会收到通知并自动更新。
 
+>
 > 简单来说，有点类似微博的过程，关注某个大V后，大V更新的状态会推送到我们的微博首页，简单理解。
 > 
->
+
+### 2. Design Principle Strive for loosely coupled designs between objects that interact. (P53)
+
+设计原则：为了交互对象之间的松耦合设计而努力。
+
+### 3. Loosely coupled designs allow use to build flexible OO systems that can handle change because they minimize the interdependency between objects. (P53)
+
+松耦合的设计之所以能让我们建立有弹性的OO系统，能够应对变化，是因为对象之间的互相依赖降到了最低。
 
 
 ---
@@ -240,7 +248,7 @@ Forecast: Improving weather on the way!
 ### 详情请看以下类图：
 ![类UML图](https://github.com/FreshStudent/HeadFirstDesignPatternsTest/blob/master/src/bookCode/ch2/part1/ch2_part1DetailsUML.png)
 
-#### 现在需要实现第第三方报告板，相关代码如下：
+#### 现在需要实现第三方报告板，相关代码如下：
 ``` java
 //ThirdPartyDisplayImpl：第三方展示板
 public class ThirdPartyDisplayImpl implements IObserver,IDisplayElement{
@@ -286,4 +294,8 @@ Forecast: Improving weather on the way!
 自己实现的第三方的展示板是：10.0度100.0湿度！！！！！
 
 ```
+
+### 以上是手动实现的观察者模式，其实Java也有内置的观察者模式~~ 留意下一章~~
+
+
 
