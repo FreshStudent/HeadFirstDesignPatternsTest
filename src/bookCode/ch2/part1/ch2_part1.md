@@ -206,7 +206,7 @@ public class ForecastDisplayImpl implements IObserver,IDisplayElement{
 > 
 
 ### 详情请看以下类图：
-![类UML图](https://github.com/FreshStudent/HeadFirstDesignPatternsTest/blob/master/src/bookCode/ch2/part1/ch2_part1DatailsUML.png)
+![类UML图](https://github.com/FreshStudent/HeadFirstDesignPatternsTest/blob/master/src/bookCode/ch2/part1/ch2_part1DetailsUML.png)
 
 
 
