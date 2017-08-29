@@ -1,7 +1,7 @@
 package bookCode.ch3.part1;
 
-public class DarkRoast extends AbstractBeverage {
-	public DarkRoast() {
+public class DarkRoastCoffee extends AbstractBeverage {
+	public DarkRoastCoffee() {
 		description = "Dark Roast Coffee";
 	}
 	

@@ -1,8 +1,8 @@
 package bookCode.ch3.part1;
 
-public class Decaf extends AbstractBeverage {
+public class DecafCoffee extends AbstractBeverage {
 	
-	public Decaf() {
+	public DecafCoffee() {
 		description = "Decaf Coffee";
 	}
  

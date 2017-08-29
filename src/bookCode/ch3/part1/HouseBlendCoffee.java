@@ -1,9 +1,9 @@
 package bookCode.ch3.part1;
 
 //星巴兹咖啡
-public class HouseBlend extends AbstractBeverage{
+public class HouseBlendCoffee extends AbstractBeverage{
 
-	public HouseBlend() {
+	public HouseBlendCoffee() {
 		description = "House Blend coffee";
 	}
 	
