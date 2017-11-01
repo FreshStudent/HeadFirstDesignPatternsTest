@@ -146,3 +146,62 @@ public class PizzaMainRun {
 
 
 ```
+
+---
+
+**ch4.part3**
+
+![类UML图](https://github.com/FreshStudent/HeadFirstDesignPatternsTest/blob/master/src/bookCode/ch4/part3/ch4_part3UML.png)
+
+ch4_part3:  
+抽取可变代码为工厂、零售店、Pizza三部分，然后，目前需要增加广州、深圳、北京3个工厂，这3个工厂生产的Pizza口味不一样，所以需要各自厂家生产各自的东西。
+
+关键代码：  
+  
+``` java
+
+public class PizzaMainRun {
+
+	public static void main(String[] args) {
+		
+		//工厂
+		GuangZhouPizzaFactory gzFactory = new GuangZhouPizzaFactory();
+		ShenZhenPizzaFactory szFactory = new ShenZhenPizzaFactory();
+		BeiJingPizzaFactory bjFactory = new BeiJingPizzaFactory();
+		
+		//销售Pizza的商店
+		GuangZhouPizzaStore gzStore = new GuangZhouPizzaStore(gzFactory);
+		ShenZhenPizzaStore szStore = new ShenZhenPizzaStore(szFactory);
+		BeiJingPizzaStore bjStore = new BeiJingPizzaStore(bjFactory);
+		
+		//售卖芝士的Pizza
+		gzStore.orderPizza("cheese");
+		szStore.orderPizza("cheese");
+		bjStore.orderPizza("cheese");
+		
+     }
+} 
+
+运行结果：
+GuangZhou CheesePizza prepare!
+GuangZhou CheesePizza cut!
+GuangZhou CheesePizza box!
+CheesePizza prepare!
+CheesePizza cut!
+CheesePizza box!
+BeiJing CheesePizza prepare!
+BeiJing CheesePizza cut!
+BeiJing CheesePizza box!
+
+```
+
+到156 页，看不下去了 先缓一缓
+
+**ch4.part4**
+
+![类UML图](https://github.com/FreshStudent/HeadFirstDesignPatternsTest/blob/master/src/bookCode/ch4/part3/ch4_part3UML.png)
+
+ch4_part3:  
+抽取可变代码为工厂、零售店、Pizza三部分，然后，目前需要增加广州、深圳、北京3个工厂，这3个工厂生产的Pizza口味不一样，所以需要各自厂家生产各自的东西。
+
+
