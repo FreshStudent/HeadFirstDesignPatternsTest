@@ -41,12 +41,14 @@ startDate:2017-08-22
 ##### 2. Be careful when choosing the areas of code that need to be extended; applying the Open-Closed Principle EVERYWHERE is wasteful, unnecessary, and can lead to complex, hard to understand code. (P87)
 在选择需要被扩展的代码部分时需要小心。每个地方都采用 开放-关闭 原则是一种浪费，也没必要，还会导致代码变得复杂而且难以理解。
 
-##### 3. The Decorator Pattern attaches additional responsibilities to an object dynamically. Decorators provide a flexible alternative to subclassing for extending functionality.        (P91)
+##### 3. The Decorator Pattern attaches additional responsibilities to an object dynamically. Decorators provide a flexible alternative to subclassing for extending functionality.        (P91)  
 装饰者模式：动态地将责任附加到对象上。若要扩展功能，装饰者提供了比继承更有弹性的替代方案。
 
-##### 4. But Java I/O also points out one of the downsides of the Decorator Pattern: designs using this pattern often result in a large number of small classes that can be overwhelming to a developer trying to use the Decorator-based API. (P101)
-但是java I/O 也引出装饰者模式的一个“缺点”：利用装饰者模式，常常造成设计中有大量的小类，数量实在太多，可能会造成使用此API程序员的困扰。
-[参考链接·ch3_part1](https://github.com/FreshStudent/HeadFirstDesignPatternsTest/blob/master/src/bookCode/ch3/part1/ch3_part1.md)
+##### 4. But Java I/O also points out one of the downsides of the Decorator Pattern: designs using this pattern often result in a large number of small classes that can be overwhelming to a developer trying to use the Decorator-based API. (P101)  
+但是java I/O 也引出装饰者模式的一个“缺点”：利用装饰者模式，常常造成设计中有大量的小类，数量实在太多，可能会造成使用此API程序员的困扰。 
+   
+[参考链接·ch3_part1](https://github.com/FreshStudent/HeadFirstDesignPatternsTest/blob/master/src/bookCode/ch3/part1/ch3_part1.md)  
+
 -------------------------------------------------- 
  
 #### Chapter 04 the factory pattern 第04章 工厂模式
@@ -54,7 +56,7 @@ startDate:2017-08-22
 ##### 1. The Factory Method Pattern defines an interface for creating an object,but lets subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses. (P134)
 工厂方法模式：定义了一个创建对象的接口，但由子类决定要实例化的是哪一个。工厂方法让类把实例化推迟到子类。
 
-#####2. Design Principle Depend upon abstractions. Do not depend upon concrete classes. (P139)
+##### 2. Design Principle Depend upon abstractions. Do not depend upon concrete classes. (P139)
 设计原则：要依赖抽象，不要依赖具体类。
 
 ##### 3. The Abstract Factory Pattern provides an interface for creating families related or dependent objects without specifying their concrete classes. (P156)
@@ -64,8 +66,12 @@ startDate:2017-08-22
 工厂方法允许类将实例化延迟到子类进行。
 
 ##### 5. The intent of Abstract Factory is to create families of related objects without having to depend on their concrete classes.        (P162)
-抽象工厂创建相关的对象家族，而不需要依赖它们的具体类。
+抽象工厂创建相关的对象家族，而不需要依赖它们的具体类。  
+
+
  
+[参考链接·ch4](https://github.com/FreshStudent/HeadFirstDesignPatternsTest/blob/master/src/bookCode/ch4/ch4.md)
+
 --------------------------------------------------
  
 #### Chapter 05 the singleton pattern 第05章 单例模式

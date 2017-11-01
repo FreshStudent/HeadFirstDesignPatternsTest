@@ -9,7 +9,6 @@ public class PizzaMainRun {
 	}
 	
 	public static Pizza orderPizza(String type) {
-		
 		Pizza pizza = null;
 		
 		// if else这段代码是生产不同口味的Pizza的
@@ -28,7 +27,6 @@ public class PizzaMainRun {
 		pizza.box();
 		
 		return pizza;
-		
 		
 	}
 	
