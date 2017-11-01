@@ -1,6 +1,6 @@
-package bookCode.ch3.part1;
+package bookCode.ch3;
 
-import bookCode.ch3.part1.AbstractBeverage.Size;
+import bookCode.ch3.AbstractBeverage.Size;
 
 public class StarbuzzCoffeeMainRun {
 	

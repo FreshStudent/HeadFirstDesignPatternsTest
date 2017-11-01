@@ -1,4 +1,4 @@
-package bookCode.ch3.part1;
+package bookCode.ch3;
 
 //星巴兹咖啡
 public class HouseBlendCoffee extends AbstractBeverage{

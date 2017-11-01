@@ -1,4 +1,4 @@
-package bookCode.ch3.part1;
+package bookCode.ch3;
 
 public abstract class AbstractBeverage {
 
