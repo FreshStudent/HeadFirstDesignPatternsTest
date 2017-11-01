@@ -46,7 +46,7 @@ startDate:2017-08-22
 
 ##### 4. But Java I/O also points out one of the downsides of the Decorator Pattern: designs using this pattern often result in a large number of small classes that can be overwhelming to a developer trying to use the Decorator-based API. (P101)
 但是java I/O 也引出装饰者模式的一个“缺点”：利用装饰者模式，常常造成设计中有大量的小类，数量实在太多，可能会造成使用此API程序员的困扰。
- 
+[参考链接·ch3_part1](https://github.com/FreshStudent/HeadFirstDesignPatternsTest/blob/master/src/bookCode/ch3/part1/ch3_part1.md)
 -------------------------------------------------- 
  
 #### Chapter 04 the factory pattern 第04章 工厂模式
